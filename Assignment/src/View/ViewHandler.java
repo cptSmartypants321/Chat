@@ -35,7 +35,7 @@ public class ViewHandler {
             loader.setLocation(getClass().getResource("viewmodel/login/viewmodel.login.fxml"));
             root = loader.load();
             LoginController view = loader.getController();
-            view.init();
+            view.init(1);
             localStage.setTitle("Login");
         }
 

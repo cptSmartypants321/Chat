@@ -38,6 +38,7 @@ public class Model implements ModelInterface{
 
         changeSupport.firePropertyChange("data", null, data);
     }
+
     // ServerConnection
 
     public void setClient(Client client){

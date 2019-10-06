@@ -69,6 +69,10 @@ public class ChatController {
 
 
     }
+    public void sendMeme(String url)
+    {
+        Conversation.appendText(url);
+    }
 
     public void onMemeButton() {
 

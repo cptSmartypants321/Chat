@@ -10,11 +10,11 @@ public class ViewModelFactory {
     private LoginViewModel loginViewModel;
 
     public ViewModelFactory(ModelFactory modelFactory) {
-        loginViewModel = new LoginViewModel(modelFactory.getDataModel());
+        loginViewModel = new LoginViewModel(modelFactory.getModel());
 
     }
 
-    public LoginViewModel getTextChartViewModel() {
+    public LoginViewModel getLoginViewModel() {
         return loginViewModel;
     }
 

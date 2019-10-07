@@ -27,14 +27,19 @@ public class MemeViewHandler {
         Scene scene=null;
         FXMLLoader loader=new FXMLLoader();
         Parent root=null;
-        Stage s=new Stage();
+
         loader.setLocation(getClass().getResource("View.memeView."+viewToOpen+".fxml"));
         root=loader.load();
         MemeController memeController=loader.getController();
         memeController.init(meme.getMemeViewModel());
-        s.setTitle("Meme");
+        stage.setTitle("Meme");
         scene =new Scene(root);
-        s.setScene(scene);
-        s.show();
+        stage.setScene(scene);
+        stage.show();
     }
+    public void close()
+    {
+        stage.close();
+    }
+
 }

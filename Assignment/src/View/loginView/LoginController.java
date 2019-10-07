@@ -11,15 +11,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.ModelFactory;
+import viewModel.LoginViewModel;
+import viewModel.ViewModelFactory;
 import viewModel.chatViewModelFactory;
-import viewModel.login.LoginViewModel;
 
 
 public class LoginController{
 
 
-    private ChatViewHandler chatViewHandler;
-    private LoginViewHandler loginViewHandler;
     private Message message;
     @FXML TextField username;
 
@@ -43,7 +42,6 @@ public class LoginController{
         Stage stage = null;
         ChatViewHandler viewHandler = new ChatViewHandler(null,cvfm);
             viewHandler.start();
-
 
 
 

@@ -2,6 +2,7 @@ import View.ChatViewHandler;
 import View.LoginViewHandler;
 import View.loginView.LoginController;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.stage.Stage;
 import model.Model;
 import model.ModelFactory;
@@ -12,7 +13,6 @@ public class StartLogin extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        LoginController loginController = new LoginController();
         ModelFactory mf = new ModelFactory();
         ViewModelFactory vfm = new ViewModelFactory(mf);
         LoginViewHandler loginViewHandler = new LoginViewHandler(stage,vfm);
@@ -20,10 +20,7 @@ public class StartLogin extends Application {
 
         loginViewHandler.start();
 
-        if(loginController.onLogin())
-        {
-            
-        }
+
 
 
     }

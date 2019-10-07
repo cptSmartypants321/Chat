@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="651.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.friendsView.FLController">
+<AnchorPane prefHeight="651.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.friendsView.FriendsController">
    <children>
       <SplitPane dividerPositions="0.5" layoutX="67.0" layoutY="41.0" prefHeight="570.0" prefWidth="750.0">
         <items>

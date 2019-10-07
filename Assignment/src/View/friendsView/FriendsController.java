@@ -9,7 +9,7 @@ import viewModel.FriendsListViewModelFactory;
 
 import javax.swing.text.html.ListView;
 
-public class FLController
+public class FriendsController
 {
     @FXML
     Button startFriend;
@@ -24,9 +24,6 @@ public class FLController
     ListView groupList;
 
     private FriendsListViewModel viewModel;
-
-    public FLController(Stage stage, FriendsListViewModelFactory modelFactory){
-    }
 
     public void init(FriendsListViewModel viewModel)
     {

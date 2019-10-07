@@ -1,6 +1,6 @@
 package viewModel;
 
-import View.friendsView.FLController;
+import View.friendsView.FriendsController;
 import javafx.beans.property.StringProperty;
 import model.Model;
 
@@ -11,7 +11,7 @@ public class FriendsListViewModel {
 
     private Model dataModel;
     private StringProperty lastMessage;
-    private FLController views;
+    private FriendsController views;
 
     public FriendsListViewModel (Model dataModel)
     {

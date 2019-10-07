@@ -36,7 +36,7 @@ public class ServerConnection {
                 Message message = (Message) inFromClient.readObject();
                 System.out.println("Message from client: " + message);
 
-                Message replyMessage = new Message(message.getId(), message.getBody().toUpperCase());
+                Message replyMessage = new Message(message.getUsername(), message.getBody().toUpperCase());
 
                 connPool.broadCastMessage(replyMessage.getBody());
             }

@@ -1,30 +1,27 @@
 package Server;
 
+import javafx.scene.control.TextField;
+
 import java.io.Serializable;
 
 public class Message implements Serializable {
 
-    private int id;
+    private String username;
     private String messageBody;
 
-    public Message(int id, String messageBody)
+    public Message(String id, String messageBody)
     {
-        this.id = id;
+        this.username = id;
         this.messageBody = messageBody;
     }
 
-    public Message(String message)
-    {
-        this(0,message);
-        setId((int) (messageBody.hashCode() * Math.random()));
+
+    public String getUsername(){
+        return username;
     }
 
-    public int getId(){
-        return id;
-    }
-
-    public void setId (int id) {
-        this.id = id;
+    public void setUsername (TextField username) {
+        this.username = username.getText();
     }
 
     public String getBody() {
@@ -32,7 +29,7 @@ public class Message implements Serializable {
     }
 
     public String toString (){
-        return "id=" + id + ", \"" + messageBody + "\"";
+        return "Username=" + username + ", \"" + messageBody + "\"";
     }
 
 }

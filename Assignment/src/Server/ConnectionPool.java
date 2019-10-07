@@ -25,14 +25,7 @@ public class ConnectionPool {
     public void broadCastMessage(String m) {
         System.out.println("Broadcast to " + conns.size() + " clients");
 
-        for (ServerConnection sc : conns) {
-            ObjectOutputStream outToClient = sc.getOutputStream();
-            try {
-                outToClient.writeObject(new Message(m));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
 
-        }
+
     }
 }

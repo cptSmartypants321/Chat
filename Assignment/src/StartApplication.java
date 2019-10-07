@@ -11,16 +11,7 @@ import viewModel.chatViewModelFactory;
 
 
 
-public class StartLogin extends Application {
-
-    public void stop(Stage stage) throws Exception {
-        ModelFactory mf = new ModelFactory();
-        ViewModelFactory vfm = new ViewModelFactory(mf);
-        LoginViewHandler loginViewHandler = new LoginViewHandler(stage,vfm);
-
-
-        loginViewHandler.close();
-    }
+public class StartApplication extends Application {
 
 
     @Override
@@ -31,6 +22,7 @@ public class StartLogin extends Application {
 
 
         loginViewHandler.start();
+
     }
     private void runAutoUpdate(Model model) {
         Thread thread = new Thread(() -> {

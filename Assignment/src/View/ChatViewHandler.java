@@ -30,7 +30,7 @@ public class ChatViewHandler {
         Parent root = null;
         Stage s = new Stage();
 
-            loader.setLocation(getClass().getResource(  viewToOpen +".fxml"));
+            loader.setLocation(getClass().getResource("chatView/Chat.fxml"));
             root = loader.load();
             ChatController chat = loader.getController();
             chat.init(viewModelFactory.getViewModel());

@@ -4,6 +4,7 @@ import Server.Client;
 import Server.Message;
 import View.ChatViewHandler;
 import View.LoginViewHandler;
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -11,7 +12,7 @@ import javafx.scene.control.TextField;
 import viewModel.login.LoginViewModel;
 
 
-public class LoginController {
+public class LoginController{
 
 
     private ChatViewHandler chatViewHandler;
@@ -35,10 +36,10 @@ public class LoginController {
 
     public void onLogin(ActionEvent actionEvent) throws Exception {
 
-            message.setUsername(username);
-            chatViewHandler.start();
 
-            loginViewHandler.close();
+
+
+
 
     }
 }

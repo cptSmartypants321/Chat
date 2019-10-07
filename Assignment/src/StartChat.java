@@ -6,7 +6,7 @@ import model.Model;
 import model.ModelFactory;
 import viewModel.chatViewModelFactory;
 
-public class Start extends Application {
+public class StartChat extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         ModelFactory mf = new ModelFactory();
@@ -27,7 +27,7 @@ public class Start extends Application {
                 }
             }
         });
-thread.setDaemon(true);
-thread.start();
+        thread.setDaemon(true);
+        thread.start();
     }
 }

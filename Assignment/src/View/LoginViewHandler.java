@@ -37,7 +37,7 @@ public class LoginViewHandler {
 
 
         if ("Login".equals(viewToOpen)){
-            loader.setLocation(getClass().getResource("viewmodel/login/viewmodel.login.fxml"));
+            loader.setLocation(getClass().getResource("loginView/login.fxml"));
             root = loader.load();
             LoginController view = loader.getController();
             view.init(viewModelFactory.getLoginViewModel());

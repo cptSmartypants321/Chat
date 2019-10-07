@@ -36,9 +36,7 @@ public class ServerConnection implements  Runnable {
                 Message message = (Message) inFromClient.readObject();
                 System.out.println("Message from client: " + message);
 
-                Message replyMessage = new Message(message.getUsername(), message.getBody().toUpperCase());
 
-                connPool.broadCastMessage(replyMessage.getBody());
             }
         }
         catch (Exception e) { }

@@ -6,23 +6,16 @@ import java.io.Serializable;
 
 public class Message implements Serializable {
 
-    private String username;
+    private User username;
     private String messageBody;
 
-    public Message(String id, String messageBody)
+    public Message(User username, String messageBody)
     {
-        this.username = id;
+        this.username = username;
         this.messageBody = messageBody;
     }
 
 
-    public String getUsername(){
-        return username;
-    }
-
-    public void setUsername (TextField username) {
-        this.username = username.getText();
-    }
 
     public String getBody() {
         return messageBody;

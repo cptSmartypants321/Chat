@@ -11,7 +11,6 @@ import java.util.Scanner;
 
 public class SocketClient implements Client {
 
-    private String username;
 
     public static void main(String[] args) {
 
@@ -25,7 +24,7 @@ public class SocketClient implements Client {
             ObjectInputStream inFromServer = new ObjectInputStream(socket.getInputStream());
             ObjectOutputStream outToServer = new ObjectOutputStream(socket.getOutputStream());
 
-            System.out.println("You are connected and can type: ");
+
 
             while (true)
             {

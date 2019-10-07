@@ -2,6 +2,7 @@ package View.loginView;
 
 import Server.Client;
 import Server.Message;
+import Server.User;
 import View.ChatViewHandler;
 import View.FriendsViewHandler;
 import View.LoginViewHandler;
@@ -30,6 +31,7 @@ public class LoginController{
 
     private LoginViewHandler viewHandler;
     private LoginViewModel viewModel;
+    private User user;
 
     public void init(LoginViewModel vm)
     {
@@ -49,6 +51,7 @@ public class LoginController{
         Stage stage =(Stage) login.getScene().getWindow();
 
         stage.close();
+
         friendsViewHandler.start();
 
 

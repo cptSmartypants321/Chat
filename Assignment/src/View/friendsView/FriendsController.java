@@ -2,11 +2,15 @@ package View.friendsView;
 
 
 import Server.UserList;
+import View.ChatViewHandler;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import model.ModelFactory;
 import viewModel.FriendsListViewModel;
 import viewModel.FriendsListViewModelFactory;
+import viewModel.chatViewModelFactory;
 
 import javax.swing.text.html.ListView;
 
@@ -54,4 +58,12 @@ public class FriendsController
     }
 
 
+    public void OnChat(ActionEvent actionEvent) throws Exception {
+
+        ModelFactory mf = new ModelFactory();
+        chatViewModelFactory vfm = new chatViewModelFactory(mf);
+        ChatViewHandler viewHandler = new ChatViewHandler(null,vfm);
+
+        viewHandler.start();
+    }
 }

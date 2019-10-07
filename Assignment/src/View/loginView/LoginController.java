@@ -1,25 +1,19 @@
 package View.loginView;
 
-import Server.Client;
 import Server.Message;
 import Server.User;
-import View.ChatViewHandler;
 import View.FriendsViewHandler;
 import View.LoginViewHandler;
-import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 import model.ModelFactory;
 import viewModel.FriendsListViewModelFactory;
 import viewModel.LoginViewModel;
-import viewModel.ViewModelFactory;
-import viewModel.chatViewModelFactory;
 
+import javax.swing.*;
 
 
 public class LoginController{
@@ -53,6 +47,7 @@ public class LoginController{
         stage.close();
 
         friendsViewHandler.start();
+
 
 
 

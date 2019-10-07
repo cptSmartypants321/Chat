@@ -21,21 +21,25 @@ public class MemeViewHandler {
     }
 
     public void start() throws Exception{
-        openView("Meme");
+        openView("");
     }
     public void openView(String viewToOpen) throws IOException {
-        Scene scene=null;
-        FXMLLoader loader=new FXMLLoader();
-        Parent root=null;
+        Scene scene = null;
+        FXMLLoader loader = new FXMLLoader();
+        Parent root = null;
+        Stage localStage = new Stage();
 
-        loader.setLocation(getClass().getResource("View.memeView."+viewToOpen+".fxml"));
-        root=loader.load();
-        MemeController memeController=loader.getController();
-        memeController.init(meme.getMemeViewModel());
-        stage.setTitle("Meme");
-        scene =new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        loader.setLocation(getClass().getResource("memeView/MemeView.fxml"));
+
+        root = loader.load();
+        MemeController view = loader.getController();
+        view.init(meme.getMemeViewModel());
+        localStage.setTitle("Friends");
+
+
+        scene = new Scene(root);
+        localStage.setScene(scene);
+        localStage.show();
     }
     public void close()
     {

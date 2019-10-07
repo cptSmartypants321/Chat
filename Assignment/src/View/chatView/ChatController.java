@@ -1,20 +1,17 @@
 package View.chatView;
 
-
+import View.MemeViewHandler;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.event.Event;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
-
 import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import model.ModelFactory;
+import viewModel.MemeViewModelFactory;
 import viewModel.chatViewModel;
-
-import java.sql.Time;
-import java.sql.Timestamp;
 
 public class ChatController {
 
@@ -80,15 +77,13 @@ public class ChatController {
         Conversation.appendText(url);
     }
 
-    public void onMemeButton() {
 
-    }
+    public void onMemeButton(ActionEvent actionEvent) throws Exception {
 
-    public void onLightCheckBox() {
+        ModelFactory mf = new ModelFactory();
+        MemeViewModelFactory vfm = new MemeViewModelFactory(mf);
+        MemeViewHandler viewHandler = new MemeViewHandler(null,vfm);
 
-    }
-
-    public void onDarkCheckBox() {
-
+        viewHandler.start();
     }
 }

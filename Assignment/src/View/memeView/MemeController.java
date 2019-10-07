@@ -1,6 +1,7 @@
 package View.memeView;
 
 import View.chatView.ChatController;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
@@ -33,7 +34,6 @@ public class MemeController {
 
     private MemeViewModel model;
     private ChatController chat;
-    public MemeController(){}
 public void init(MemeViewModel viewModel)
 {
     this.model=model;
@@ -79,9 +79,7 @@ public void onPress()
     }
 }
 
-public void setCancelButton (){
 
-}
-
-
+    public void onCancelButton(ActionEvent actionEvent) {
+    }
 }

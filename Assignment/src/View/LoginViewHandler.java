@@ -9,14 +9,14 @@ import viewModel.ViewModelFactory;
 
 import java.io.IOException;
 
-public class ViewHandler {
+public class LoginViewHandler {
 
 
-    //private Stage stage;
+    private Stage localStage;
     private ViewModelFactory viewModelFactory;
 
-    public ViewHandler(Stage stage, ViewModelFactory viewModelFactory) {
-        // this.stage = stage;
+    public LoginViewHandler(Stage stage, ViewModelFactory viewModelFactory) {
+        this.localStage = stage;
         this.viewModelFactory = viewModelFactory;
     }
 
@@ -25,18 +25,22 @@ public class ViewHandler {
 
     }
 
+    public void close()
+    {
+        localStage.close();
+    }
+
     public void openView(String viewToOpen) throws IOException {
         Scene scene = null;
         FXMLLoader loader = new FXMLLoader();
         Parent root = null;
-        Stage localStage = new Stage();
 
 
         if ("Login".equals(viewToOpen)){
             loader.setLocation(getClass().getResource("viewmodel/login/viewmodel.login.fxml"));
             root = loader.load();
             LoginController view = loader.getController();
-            view.init(1);
+            view.init(viewModelFactory.getLoginViewModel());
             localStage.setTitle("Login");
         }
 

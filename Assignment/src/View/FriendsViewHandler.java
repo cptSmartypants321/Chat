@@ -1,47 +1,46 @@
 package View;
 
-import View.friendslistView.FLController;
+import View.friendsView.FLController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import viewModel.FriendsListViewModel;
 import viewModel.FriendsListViewModelFactory;
 
 import java.io.IOException;
 
 public class FriendsViewHandler
 {
-    private Stage stage;
+    private Stage localStage;
     private FriendsListViewModelFactory friendsListViewModelFactory;
-    private FriendsListViewModel friendsListViewModel;
 
-    public FriendsViewHandler(Stage stage, FriendsListViewModelFactory friendsListViewModelFactory)
+    public FriendsViewHandler(Stage localStage, FriendsListViewModelFactory friendsListViewModelFactory)
     {
-        this.stage = stage;
+        this.localStage = localStage;
         this.friendsListViewModelFactory = friendsListViewModelFactory;
     }
 
     public void start() throws Exception
     {
-        openView("Friendslist");
+        openView("Friends");
     }
 
-    public void openView (String viewToOpen) throws IOException
-    {
+    public void openView(String viewToOpen) throws IOException {
         Scene scene = null;
         FXMLLoader loader = new FXMLLoader();
-        Parent root  = null;
+        Parent root = null;
 
-        loader.setLocation(getClass().getResource("friendslistView/Friendslist.fxml"));
-        root = loader.load();
 
-        FLController view = loader.getController();
-        view.init(friendsListViewModelFactory.getFriendsListViewModel());
-        stage.setTitle("Friends list");
+        if ("Friends".equals(viewToOpen)){
+            loader.setLocation(getClass().getResource("friendsView/friends.fxml"));
+            root = loader.load();
+            FLController view = loader.getController();
+            view.init(friendsListViewModelFactory.getFriendsListViewModel());
+            localStage.setTitle("Friends");
+        }
 
         scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        localStage.setScene(scene);
+        localStage.show();
     }
 }

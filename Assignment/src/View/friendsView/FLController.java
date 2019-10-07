@@ -1,4 +1,4 @@
-package View.friendslistView;
+package View.friendsView;
 
 
 import javafx.fxml.FXML;

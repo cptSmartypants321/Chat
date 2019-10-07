@@ -8,7 +8,7 @@ import viewModel.FriendsListViewModelFactory;
 
 import java.util.Random;
 
-public class FriendsApp extends Application
+public class StartFriends extends Application
 {
     @Override
     public void start (Stage stage) throws Exception

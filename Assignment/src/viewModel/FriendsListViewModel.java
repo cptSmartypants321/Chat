@@ -1,11 +1,10 @@
 package viewModel;
 
-import View.friendslistView.FLController;
+import View.friendsView.FLController;
 import javafx.beans.property.StringProperty;
 import model.Model;
 
 
-import javax.swing.text.html.ListView;
 import java.beans.PropertyChangeEvent;
 
 public class FriendsListViewModel {

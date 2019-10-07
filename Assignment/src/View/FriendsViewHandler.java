@@ -29,15 +29,14 @@ public class FriendsViewHandler
         Scene scene = null;
         FXMLLoader loader = new FXMLLoader();
         Parent root = null;
+        localStage = new Stage();
 
-
-        if ("Friends".equals(viewToOpen)){
             loader.setLocation(getClass().getResource("friendsView/friends.fxml"));
             root = loader.load();
             FLController view = loader.getController();
             view.init(friendsListViewModelFactory.getFriendsListViewModel());
             localStage.setTitle("Friends");
-        }
+
 
         scene = new Scene(root);
         localStage.setScene(scene);

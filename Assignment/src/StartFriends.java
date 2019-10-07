@@ -6,7 +6,6 @@ import javafx.stage.Stage;
 import model.ModelFactory;
 import viewModel.FriendsListViewModelFactory;
 
-import java.util.Random;
 
 public class StartFriends extends Application
 {
@@ -14,8 +13,11 @@ public class StartFriends extends Application
     public void start (Stage stage) throws Exception
     {
         ModelFactory mf = new ModelFactory();
-        FriendsListViewModelFactory viewModelFactory = new FriendsListViewModelFactory(mf);
-        FriendsViewHandler viewHandler = new FriendsViewHandler(stage, viewModelFactory);
-        viewHandler.start();
+        FriendsListViewModelFactory vfm = new FriendsListViewModelFactory(mf);
+        FriendsViewHandler friendsViewHandler = new FriendsViewHandler(stage,vfm);
+
+
+        friendsViewHandler.start();
+
     }
 }

@@ -39,13 +39,16 @@ public class ChatController {
     public void init(chatViewModel vm) {
         viewModel = vm;
         TimeLabel.textProperty().bind(viewModel.getTimeStamp());
+
+
         vm.getText().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 Conversation.appendText(newValue);
-                ;
+
             }
         });
+
         textField.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
@@ -54,6 +57,7 @@ public class ChatController {
                 }
             }
         });
+
     }
 
     public void updateFields() {
@@ -61,6 +65,8 @@ public class ChatController {
         //Conversation
 
     }
+
+
 
 
     public void onSendButton() {

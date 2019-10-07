@@ -2,8 +2,10 @@ package viewModel;
 
 
 import model.ModelFactory;
+import viewModel.login.LoginViewModel;
 
 public class chatViewModelFactory {
+
     private chatViewModel viewModel;
 
     public chatViewModelFactory(ModelFactory modelFactory){

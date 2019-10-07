@@ -1,6 +1,7 @@
 package View;
 
 import View.chatView.ChatController;
+import View.loginView.LoginController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -21,7 +22,7 @@ public class ChatViewHandler {
     }
 
     public void start() throws  Exception{
-        openView("Chat");
+        openView("");
     }
 
     public void openView(String viewToOpen) throws IOException{
@@ -31,10 +32,11 @@ public class ChatViewHandler {
         Stage s = new Stage();
 
             loader.setLocation(getClass().getResource("chatView/Chat.fxml"));
+
             root = loader.load();
-            ChatController chat = loader.getController();
-            chat.init(viewModelFactory.getViewModel());
-            s.setTitle("Chat");
+            ChatController view = loader.getController();
+            view.init(viewModelFactory.getViewModel());
+        s.setTitle("Chat");
 
 
         scene = new Scene(root);

@@ -12,6 +12,7 @@ public class StartChat extends Application {
         ModelFactory mf = new ModelFactory();
         chatViewModelFactory vfm = new chatViewModelFactory(mf);
         ChatViewHandler viewHandler = new ChatViewHandler(stage,vfm);
+
         viewHandler.start();
         runAutoUpdate((Model) mf.getModel());
     }

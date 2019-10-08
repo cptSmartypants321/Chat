@@ -4,6 +4,7 @@ import Server.Message;
 import Server.User;
 import View.FriendsViewHandler;
 import View.LoginViewHandler;
+import View.ViewHandler;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -53,16 +54,22 @@ public class LoginController{
 
 
     public void onLogin() throws Exception {
-        ModelFactory mf = new ModelFactory();
-        FriendsListViewModelFactory vfm = new FriendsListViewModelFactory(mf);
-        FriendsViewHandler friendsViewHandler = new FriendsViewHandler(null,vfm);
+
+        ViewHandler viewHandler = null;
+        assert false;
+        viewHandler.openViewFriendslistView();
 
 
         Stage stage =(Stage) login.getScene().getWindow();
 
         stage.close();
 
-        friendsViewHandler.start();
+
+
+        user = new User(username.getText());
+        System.out.println(user.getUsername());
+
+
 
 
 

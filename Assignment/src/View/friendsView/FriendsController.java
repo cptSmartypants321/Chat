@@ -32,7 +32,7 @@ public class FriendsController
     }
 
 
-    
+
 
     public void OnChat(ActionEvent actionEvent) throws Exception {
 

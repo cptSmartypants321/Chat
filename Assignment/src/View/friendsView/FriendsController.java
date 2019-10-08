@@ -6,29 +6,23 @@ import View.ViewHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import model.ModelFactory;
 import viewModel.FriendsListViewModel;
 import viewModel.ViewModelFactories;
 
-import javax.swing.text.html.ListView;
 import java.util.ArrayList;
 
 public class FriendsController
 {
+
     private ArrayList<UserList> userList;
 
     private UserList users;
     @FXML
     Button startFriend;
-    @FXML
-    Button startGroup;
-    @FXML
-    Button createGroup;
 
-    @FXML
-    ListView friendsList;
-    @FXML
-    ListView groupList;
+    @FXML ListView friendsList;
 
     private FriendsListViewModel viewModel;
 
@@ -37,26 +31,8 @@ public class FriendsController
         this.viewModel = viewModel;
     }
 
-    public void setStartFriend(FriendsListViewModel viewModel)
-    {
 
-    }
-
-    public void setStartGroup(FriendsListViewModel viewModel)
-    {
-
-    }
-
-    public void setCreateGroup()
-    {
-
-    }
-
-    public void setFriendsList()
-    {
-
-    }
-
+    
 
     public void OnChat(ActionEvent actionEvent) throws Exception {
 

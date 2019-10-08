@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import model.ModelFactory;
 import viewModel.FriendsListViewModel;
 import viewModel.FriendsListViewModelFactory;
-import viewModel.chatViewModelFactory;
+import viewModel.ChatViewModelFactory;
 
 import javax.swing.text.html.ListView;
 
@@ -61,9 +61,12 @@ public class FriendsController
     public void OnChat(ActionEvent actionEvent) throws Exception {
 
         ModelFactory mf = new ModelFactory();
-        chatViewModelFactory vfm = new chatViewModelFactory(mf);
+        ChatViewModelFactory vfm = new ChatViewModelFactory(mf);
         ChatViewHandler viewHandler = new ChatViewHandler(null,vfm);
 
         viewHandler.start();
+
+
+
     }
 }

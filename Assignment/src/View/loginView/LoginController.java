@@ -5,13 +5,17 @@ import Server.User;
 import View.FriendsViewHandler;
 import View.LoginViewHandler;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import model.ModelFactory;
 import viewModel.FriendsListViewModelFactory;
 import viewModel.LoginViewModel;
+
 
 import javax.swing.*;
 
@@ -31,12 +35,24 @@ public class LoginController{
     {
         viewModel = vm;
 
-
+        username.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent event) {
+                if(event.getCode() == KeyCode.ENTER){
+                    try {
+                        onLogin();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
 
     }
 
 
-    public void onLogin(ActionEvent actionEvent) throws Exception {
+
+    public void onLogin() throws Exception {
         ModelFactory mf = new ModelFactory();
         FriendsListViewModelFactory vfm = new FriendsListViewModelFactory(mf);
         FriendsViewHandler friendsViewHandler = new FriendsViewHandler(null,vfm);

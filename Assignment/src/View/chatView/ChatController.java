@@ -11,7 +11,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import model.ModelFactory;
 import viewModel.MemeViewModelFactory;
-import viewModel.chatViewModel;
+import viewModel.ChatViewModel;
 
 public class ChatController {
 
@@ -31,11 +31,12 @@ public class ChatController {
     @FXML
     private Label TimeLabel;
 
-    private chatViewModel viewModel;
+    private ChatViewModel viewModel;
 
-    public void init(chatViewModel vm) {
+    public void init(ChatViewModel vm) {
         viewModel = vm;
         TimeLabel.textProperty().bind(viewModel.getTimeStamp());
+        System.out.println(viewModel.getTimeStamp() + " heeeey");
 
 
         vm.getText().addListener(new ChangeListener<String>() {

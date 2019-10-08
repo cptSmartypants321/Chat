@@ -7,16 +7,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import viewModel.chatViewModelFactory;
+import viewModel.ChatViewModelFactory;
 
 import java.io.IOException;
 
 public class ChatViewHandler {
     private Stage stage;
-    private chatViewModelFactory viewModelFactory;
+    private ChatViewModelFactory viewModelFactory;
 
 
-    public ChatViewHandler(Stage stage, chatViewModelFactory viewModelFactory){
+    public ChatViewHandler(Stage stage, ChatViewModelFactory viewModelFactory){
         this.stage = stage;
         this.viewModelFactory = viewModelFactory;
     }

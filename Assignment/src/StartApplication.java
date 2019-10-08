@@ -1,14 +1,9 @@
-import View.ChatViewHandler;
 import View.LoginViewHandler;
-import View.loginView.LoginController;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.stage.Stage;
 import model.Model;
 import model.ModelFactory;
 import viewModel.ViewModelFactory;
-import viewModel.chatViewModelFactory;
-
 
 
 public class StartApplication extends Application {
@@ -22,6 +17,9 @@ public class StartApplication extends Application {
 
 
         loginViewHandler.start();
+        runAutoUpdate((Model) mf.getModel());
+
+
 
     }
     private void runAutoUpdate(Model model) {
@@ -29,12 +27,13 @@ public class StartApplication extends Application {
             while (true){
                 model.UpdateData();
                 try{
-                    Thread.sleep(200);
+                    Thread.sleep(2000);
                 }catch (InterruptedException e){
                     e.printStackTrace();
                 }
             }
         });
-
+        thread.setDaemon(true);
+        thread.start();
     }
 }

@@ -8,13 +8,12 @@ import model.Model;
 
 import java.beans.PropertyChangeEvent;
 
-public class chatViewModel {
+public class ChatViewModel {
     private StringProperty text;
-
     private StringProperty timeStamp;
     private Model model;
 
-    public chatViewModel(Model model){
+    public ChatViewModel(Model model){
         this.model = model;
         text = new SimpleStringProperty();
         timeStamp = new SimpleStringProperty();

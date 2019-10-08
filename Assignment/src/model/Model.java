@@ -15,6 +15,9 @@ public class Model implements ModelInterface{
     private String text;
     private String userName;
 
+    public Model() {
+        int stopHer = 0;
+    }
 
     private void calTimeStamp() {
         SimpleDateFormat sdfDate = new SimpleDateFormat("HH:mm:ss");

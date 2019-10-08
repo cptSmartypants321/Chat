@@ -20,7 +20,7 @@ public class ServerConnection implements  Runnable {
         connPool = cp;
 
         try {
-            outToClientes = new ObjectOutputStream(clientSocket.getOutputStream());
+            outToClient = new ObjectOutputStream(clientSocket.getOutputStream());
             inFromClient = new ObjectInputStream(clientSocket.getInputStream());
         }
         catch (IOException e)

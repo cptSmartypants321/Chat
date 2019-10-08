@@ -15,9 +15,14 @@ public class MemeViewModel {
     {
         this.memeViewSendController=memeViewSendController;
         this.model=model;
-        text=new SimpleStringProperty();
+
 
     }
+
+    public MemeViewModel(Model model) {
+        this.model = model;
+    }
+
 
     public Model getModel() {
         return model;

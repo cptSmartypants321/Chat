@@ -5,19 +5,95 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="13" jdkType="JavaSDK" />
+    <orderEntry type="jdk" jdkName="11.0.3" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://C:/Program Files/Java/javafx-sdk-11.0.2/lib" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/api" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/jdk/api/attach/spec" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/jdk/api/javac/tree" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/jdk/api/javadoc/doclet" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/jdk/api/jconsole/spec" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/jdk/api/jpda/jdi" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/jdk/api/nashorn" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/jre/api/accessibility/jaccess/spec" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/jre/api/javaws/jnlp" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/jre/api/management/cmm" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/jre/api/management/extension" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/jre/api/management/rm" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/jre/api/net/httpserver/spec" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/jre/api/net/socketoptions/spec" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/jre/api/nio/sctp/spec" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/jre/api/plugin/dom" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/jre/api/security/jaas/spec" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/jre/api/security/jgss/spec" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/jre/api/security/smartcardio/spec" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/2d/samples" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/beans/examples" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/imf/api-sample" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/io/example" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/javadoc/taglet" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/jmx/examples/Basic" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/jmx/examples/Descriptors" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/jmx/examples/Essential" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/jmx/examples/Lookup" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/jmx/examples/MXBean" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/jmx/examples/Notification" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/jmx/examples/Security/fine_grained/client" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/jmx/examples/Security/fine_grained/mbeans" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/jmx/examples/Security/fine_grained/server" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/jmx/examples/Security/simple/client" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/jmx/examples/Security/simple/mbeans" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/jmx/examples/Security/simple/server" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/jmx/examples/Security/subject_delegation/client" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/jmx/examples/Security/subject_delegation/mbeans" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/jmx/examples/Security/subject_delegation/server" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/jpda" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/jps/spec" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/lang" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/security/crypto" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/security/jgss/lab/src" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/security/jgss/tutorials" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/security/jsse/samples/rmi" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/security/jsse/samples/sni" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/security/jsse/samples/sockets/client" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/security/jsse/samples/sockets/server" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/security/jsse/samples/sslengine" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/security/jsse/samples/urls" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/security/xmldsig" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/serialization/examples/altimpl" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/serialization/examples/custom" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/serialization/examples/evolvenewsuper" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/serialization/examples/evolveserial" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/serialization/examples/externpers" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/serialization/examples/externsuper" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/serialization/examples/nonexternsuper" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/serialization/examples/nonserialsuper" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/serialization/examples/sockets" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/serialization/examples/symbol" />
+          <root url="file://C:/Program Files/Java/jdk1.8.0_201/docs/technotes/guides/swing/1.4" />
+        </SOURCES>
+        <jarDirectory url="file://C:/Program Files/Java/jdk1.8.0_201" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://C:/Program Files/Java/jdk-13/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="file://C:/Program Files/Java/javafx-sdk-11.0.2/lib" />
+          <root url="file://C:/Program Files/Java/jdk-13/lib" />
         </SOURCES>
-        <jarDirectory url="file://C:/Program Files/Java/javafx-sdk-11.0.2/lib" recursive="false" />
-        <jarDirectory url="file://C:/Program Files/Java/javafx-sdk-11.0.2/lib" recursive="false" type="SOURCES" />
+        <jarDirectory url="file://C:/Program Files/Java/jdk-13/lib" recursive="false" />
+        <jarDirectory url="file://C:/Program Files/Java/jdk-13/lib" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
   </component>

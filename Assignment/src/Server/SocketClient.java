@@ -29,7 +29,6 @@ public class SocketClient implements Client {
 
             while (true)
             {
-                outToServer.writeObject(user);
 
 
 

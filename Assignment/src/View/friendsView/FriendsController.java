@@ -2,16 +2,13 @@ package View.friendsView;
 
 
 import Server.UserList;
-import View.ChatViewHandler;
-import View.LoginViewHandler;
+import View.ViewHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
 import model.ModelFactory;
 import viewModel.FriendsListViewModel;
-import viewModel.FriendsListViewModelFactory;
-import viewModel.ChatViewModelFactory;
+import viewModel.ViewModelFactories;
 
 import javax.swing.text.html.ListView;
 import java.util.ArrayList;
@@ -66,10 +63,11 @@ public class FriendsController
 
 
         ModelFactory mf = new ModelFactory();
-        ChatViewModelFactory vfm = new ChatViewModelFactory(mf);
-        ChatViewHandler viewHandler = new ChatViewHandler(null,vfm);
+        ViewModelFactories vfm = new ViewModelFactories(mf);
+        ViewHandler viewHandler = new ViewHandler(null,vfm);
 
-        viewHandler.start();
+        viewHandler.openViewChatView();
+
 
 
 

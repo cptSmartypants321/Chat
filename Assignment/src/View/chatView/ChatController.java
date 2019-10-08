@@ -1,6 +1,6 @@
 package View.chatView;
 
-import View.MemeViewHandler;
+import View.ViewHandler;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -10,8 +10,8 @@ import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import model.ModelFactory;
-import viewModel.MemeViewModelFactory;
 import viewModel.ChatViewModel;
+import viewModel.ViewModelFactories;
 
 public class ChatController {
 
@@ -82,9 +82,9 @@ public class ChatController {
     public void onMemeButton(ActionEvent actionEvent) throws Exception {
 
         ModelFactory mf = new ModelFactory();
-        MemeViewModelFactory vfm = new MemeViewModelFactory(mf);
-        MemeViewHandler viewHandler = new MemeViewHandler(null,vfm);
+        ViewModelFactories vfm = new ViewModelFactories(mf);
+        ViewHandler viewHandler = new ViewHandler(null,vfm);
 
-        viewHandler.start();
+        viewHandler.openViewMemeView();
     }
 }

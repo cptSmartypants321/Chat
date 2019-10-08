@@ -44,7 +44,7 @@ public void onPress()
 {
     if(imageView1.isPressed())
     {
-        model.updateMeme(imageView1);
+        model.getModel().UpdateMeme();
 
     }
     if(imageView2.isPressed())

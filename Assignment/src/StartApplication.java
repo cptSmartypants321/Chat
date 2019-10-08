@@ -1,11 +1,9 @@
-import View.LoginViewHandler;
 import View.ViewHandler;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import model.Model;
 import model.ModelFactory;
 import viewModel.ViewModelFactories;
-import viewModel.ViewModelFactory;
 
 
 public class StartApplication extends Application {

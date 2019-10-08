@@ -1,7 +1,8 @@
 package View.friendsView;
 
 
-import Server.UserList;
+
+import Server.Both.UserList;
 import View.ViewHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

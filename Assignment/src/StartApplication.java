@@ -16,7 +16,7 @@ private Client client;
         ViewModelFactories vfm = new ViewModelFactories(mf);
         ViewHandler viewHandler = new ViewHandler(stage,vfm);
         client=new Client();
-        client.setModelFactory(mf);
+//        client.setModelFactory(mf);
 
         viewHandler.openViewLoginView();
 

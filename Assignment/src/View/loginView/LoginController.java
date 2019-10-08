@@ -1,8 +1,6 @@
 package View.loginView;
 
-import Server.Message;
-import Server.SocketClient;
-import Server.User;
+
 import View.ViewHandler;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -18,14 +16,14 @@ import viewModel.ViewModelFactories;
 
 public class LoginController{
 
-    private Message message;
+//    private Message message;
     @FXML TextField username;
 
     @FXML Button login;
 
     private LoginViewModel viewModel;
-    private User user;
-    private SocketClient socketClient;
+//    private User user;
+//    private SocketClient socketClient;
 
     public void init(LoginViewModel vm)
     {

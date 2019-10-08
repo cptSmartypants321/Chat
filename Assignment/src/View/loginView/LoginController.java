@@ -1,6 +1,7 @@
 package View.loginView;
 
 import Server.Message;
+import Server.SocketClient;
 import Server.User;
 import View.FriendsViewHandler;
 import View.LoginViewHandler;
@@ -31,10 +32,12 @@ public class LoginController{
     private LoginViewHandler viewHandler;
     private LoginViewModel viewModel;
     private User user;
+    private SocketClient socketClient;
 
-    public void init(LoginViewModel vm)
+    public void init(LoginViewModel vm,SocketClient socketClient)
     {
         viewModel = vm;
+        this.socketClient=socketClient;
 
         username.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
@@ -59,6 +62,8 @@ public class LoginController{
         assert false;
         viewHandler.openViewFriendslistView();
 
+        User temp=new User(username.getText());
+        socketClient.setUser(temp);
 
         Stage stage =(Stage) login.getScene().getWindow();
 

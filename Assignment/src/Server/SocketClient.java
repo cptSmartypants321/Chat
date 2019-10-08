@@ -1,6 +1,7 @@
 package Server;
 
 
+import View.loginView.LoginController;
 import model.Model;
 
 import java.io.IOException;
@@ -10,7 +11,7 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class SocketClient implements Client {
-
+    private User user;
 
     public static void main(String[] args) {
 
@@ -28,7 +29,7 @@ public class SocketClient implements Client {
 
             while (true)
             {
-
+                outToServer.writeObject(user);
 
 
 
@@ -51,5 +52,10 @@ public class SocketClient implements Client {
     @Override
     public void sendMessage(String message) {
 
+    }
+    @Override
+    public void setUser(User user)
+    {
+        this.user=user;
     }
 }

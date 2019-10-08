@@ -5,6 +5,8 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class SocketServer {
+    private UserList userList;
+
     public static void main(String[] args) {
         System.out.println("Server starting....");
         int count=0;
@@ -22,6 +24,10 @@ public class SocketServer {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public void setUser(User user)
+    {
+        userList.addUser(user);
     }
 
 }

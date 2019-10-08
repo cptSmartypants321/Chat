@@ -20,7 +20,7 @@ public class ServerConnection implements  Runnable {
         connPool = cp;
 
         try {
-            outToClient = new ObjectOutputStream(clientSocket.getOutputStream());
+            outToClientes = new ObjectOutputStream(clientSocket.getOutputStream());
             inFromClient = new ObjectInputStream(clientSocket.getInputStream());
         }
         catch (IOException e)
@@ -33,8 +33,8 @@ public class ServerConnection implements  Runnable {
     public void run (){
         try {
             while (true) {
-                Message message = (Message) inFromClient.readObject();
-                System.out.println("Message from client: " + message);
+                User temp=(User)inFromClient.readObject();
+
 
 
             }

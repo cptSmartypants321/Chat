@@ -20,9 +20,13 @@ public class Message implements Serializable {
     public String getBody() {
         return messageBody;
     }
+    public User getUser()
+    {
+        return username;
+    }
 
     public String toString (){
-        return "Username=" + username + ", \"" + messageBody + "\"";
+        return "Username=" + username.toString() + ", \n" + messageBody + "\n";
     }
 
 }

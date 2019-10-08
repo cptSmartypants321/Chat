@@ -2,6 +2,7 @@ package model;
 
 import Server.Client;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.image.Image;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
@@ -18,6 +19,7 @@ public class Model implements ModelInterface{
     public Model() {
         int stopHer = 0;
     }
+
 
     private void calTimeStamp() {
         SimpleDateFormat sdfDate = new SimpleDateFormat("HH:mm:ss");
@@ -42,6 +44,10 @@ public class Model implements ModelInterface{
 
         changeSupport.firePropertyChange("data", null, data);
     }
+    public void UpdateMeme()
+    {
+    }
+
 
     // ServerConnection
 

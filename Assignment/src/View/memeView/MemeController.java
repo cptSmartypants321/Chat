@@ -1,9 +1,9 @@
 package View.memeView;
 
-import View.chatView.ChatController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import viewModel.MemeViewModel;
 
@@ -33,7 +33,8 @@ public class MemeController {
 
 
     private MemeViewModel model;
-    private ChatController chat;
+    private MemeViewSendController sendController;
+
 public void init(MemeViewModel viewModel)
 {
     this.model=model;
@@ -43,43 +44,52 @@ public void onPress()
 {
     if(imageView1.isPressed())
     {
-        chat.sendMeme("https://pics.me.me/ah-see-you-re-a-man-of-culture-as-well-17311219.png");
+        model.updateMeme(imageView1);
+
     }
     if(imageView2.isPressed())
     {
-        chat.sendMeme("https://i.kym-cdn.com/entries/icons/original/000/021/807/4d7.png");
+        Image image=imageView2.getImage();
+        sendController.sendMeme(image);
     }
-    if(imageView3.isPressed())
-    {
-        chat.sendMeme("https://i.kym-cdn.com/entries/icons/mobile/000/023/897/inhalegull.jpg");
+    if(imageView3.isPressed()) {
+        Image image=imageView3.getImage();
+        sendController.sendMeme(image);
     }
     if(imageView4.isPressed())
     {
-        chat.sendMeme("https://i.kym-cdn.com/entries/icons/original/000/022/940/mockingspongebobbb.jpg");
+        Image image=imageView4.getImage();
+        sendController.sendMeme(image);
     }
     if(imageView5.isPressed())
     {
-        chat.sendMeme("https://i.kym-cdn.com/entries/icons/original/000/023/987/overcome.jpg");
+        Image image=imageView5.getImage();
+        sendController.sendMeme(image);
     }
     if(imageView6.isPressed())
     {
-        chat.sendMeme("https://i.kym-cdn.com/entries/icons/mobile/000/022/138/ollesafeee.jpg");
+        Image image=imageView6.getImage();
+        sendController.sendMeme(image);
     }
     if(imageView7.isPressed())
     {
-        chat.sendMeme("https://i.kym-cdn.com/photos/images/newsfeed/000/358/751/9e2.jpg");
+        Image image=imageView7.getImage();
+        sendController.sendMeme(image);
     }
     if(imageView8.isPressed())
     {
-        chat.sendMeme("https://i.kym-cdn.com/entries/icons/original/000/023/021/e02e5ffb5f980cd8262cf7f0ae00a4a9_press-x-to-doubt-memes-memesuper-la-noire-doubt-meme_419-238.png");
+        Image image=imageView8.getImage();
+        sendController.sendMeme(image);
     }
     if(imageView9.isPressed())
     {
-        chat.sendMeme("https://i.kym-cdn.com/entries/icons/original/000/022/978/yNlQWRM.jpg");
+        Image image=imageView9.getImage();
+        sendController.sendMeme(image);
     }
 }
 
 
     public void onCancelButton(ActionEvent actionEvent) {
+
     }
 }

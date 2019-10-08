@@ -23,7 +23,7 @@ public class FriendsViewHandler
 
     public void start() throws Exception
     {
-        openView("");
+        openView("friends");
     }
 
     public void openView(String viewToOpen) throws IOException {
@@ -32,16 +32,18 @@ public class FriendsViewHandler
         Parent root = null;
         localStage = new Stage();
 
-        loader.setLocation(getClass().getResource("friendsView/friends.fxml"));
+        if ("friends".equals(viewToOpen)) {
+            loader.setLocation(getClass().getResource("friendsView/friends.fxml"));
 
-        root = loader.load();
-        FriendsController view = loader.getController();
-        view.init(friendsListViewModelFactory.getFriendsListViewModel());
-        localStage.setTitle("Friends");
+            root = loader.load();
+            FriendsController view = loader.getController();
+            view.init(friendsListViewModelFactory.getFriendsListViewModel());
+            localStage.setTitle("Friends");
 
 
-        scene = new Scene(root);
-        localStage.setScene(scene);
-        localStage.show();
+            scene = new Scene(root);
+            localStage.setScene(scene);
+            localStage.show();
+        }
     }
 }

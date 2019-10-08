@@ -3,6 +3,7 @@ package View.friendsView;
 
 import Server.UserList;
 import View.ChatViewHandler;
+import View.LoginViewHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -13,9 +14,11 @@ import viewModel.FriendsListViewModelFactory;
 import viewModel.ChatViewModelFactory;
 
 import javax.swing.text.html.ListView;
+import java.util.ArrayList;
 
 public class FriendsController
 {
+    private ArrayList<UserList> userList;
 
     private UserList users;
     @FXML
@@ -39,7 +42,7 @@ public class FriendsController
 
     public void setStartFriend(FriendsListViewModel viewModel)
     {
-        startFriend.getText().equals(users.toString());
+
     }
 
     public void setStartGroup(FriendsListViewModel viewModel)
@@ -59,6 +62,8 @@ public class FriendsController
 
 
     public void OnChat(ActionEvent actionEvent) throws Exception {
+
+
 
         ModelFactory mf = new ModelFactory();
         ChatViewModelFactory vfm = new ChatViewModelFactory(mf);

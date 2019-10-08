@@ -34,7 +34,7 @@ public class MemeViewHandler {
         root = loader.load();
         MemeController view = loader.getController();
         view.init(meme.getMemeViewModel());
-        localStage.setTitle("Friends");
+        localStage.setTitle("Memes");
 
 
         scene = new Scene(root);

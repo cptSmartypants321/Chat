@@ -1,3 +1,4 @@
+import Server.Client;
 import View.ViewHandler;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -7,13 +8,15 @@ import viewModel.ViewModelFactories;
 
 
 public class StartApplication extends Application {
-
+private Client client;
 
     @Override
     public void start(Stage stage) throws Exception {
         ModelFactory mf = new ModelFactory();
         ViewModelFactories vfm = new ViewModelFactories(mf);
         ViewHandler viewHandler = new ViewHandler(stage,vfm);
+        client=new Client();
+        client.setModelFactory(mf);
 
         viewHandler.openViewLoginView();
 

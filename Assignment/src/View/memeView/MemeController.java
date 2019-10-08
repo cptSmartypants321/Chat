@@ -37,7 +37,7 @@ public class MemeController {
 
 public void init(MemeViewModel viewModel)
 {
-    this.model=model;
+    this.model=viewModel;
 
 }
 public void onPress()

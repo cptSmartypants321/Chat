@@ -18,7 +18,7 @@ public class FriendsController
 
     private ArrayList<UserList> userList;
 
-    private UserList users;
+    private Server.Both.UserList user;
     @FXML
     Button startFriend;
 
@@ -31,7 +31,17 @@ public class FriendsController
         this.viewModel = viewModel;
     }
 
-
+//   public void setFriendsList(ServerV1.Both.UserList temp)
+//   {
+//       for(int i=0;i<temp.getUserList().size();i++)
+//       {
+////           friendsList.setItems();
+//       }
+//   }
+//    public String  getfriend()
+//    {
+//        (String)friendsList.getEditingIndex()
+//    }
 
 
     public void OnChat(ActionEvent actionEvent) throws Exception {

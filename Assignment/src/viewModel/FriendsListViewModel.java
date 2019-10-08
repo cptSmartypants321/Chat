@@ -41,4 +41,7 @@ public class FriendsListViewModel {
     }
 
 
+//    public String getFreind() {
+//        views.
+//    }
 }

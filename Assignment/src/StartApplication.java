@@ -1,8 +1,10 @@
 import View.LoginViewHandler;
+import View.ViewHandler;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import model.Model;
 import model.ModelFactory;
+import viewModel.ViewModelFactories;
 import viewModel.ViewModelFactory;
 
 
@@ -12,11 +14,11 @@ public class StartApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         ModelFactory mf = new ModelFactory();
-        ViewModelFactory vfm = new ViewModelFactory(mf);
-        LoginViewHandler loginViewHandler = new LoginViewHandler(stage,vfm);
+        ViewModelFactories vfm = new ViewModelFactories(mf);
+        ViewHandler viewHandler = new ViewHandler(stage,vfm);
 
+        viewHandler.openViewLoginView();
 
-        loginViewHandler.start();
         runAutoUpdate((Model) mf.getModel());
 
 

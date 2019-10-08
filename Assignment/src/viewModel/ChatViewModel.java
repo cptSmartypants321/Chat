@@ -23,7 +23,7 @@ public class ChatViewModel {
 
     public void UpdateData(PropertyChangeEvent evt){
         Platform.runLater(() -> {
-
+            System.out.println("her");
             String[] updatedData = (String[]) evt.getNewValue();
             text.setValue(updatedData[1]);
             timeStamp.setValue(updatedData[0]);
@@ -37,6 +37,7 @@ public class ChatViewModel {
     public StringProperty getTimeStamp(){
 
         return timeStamp;
+
 
     }
 }

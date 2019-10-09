@@ -1,6 +1,7 @@
 package Server;
 
 import Server.Both.Request;
+import Server.Both.User;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -21,13 +22,18 @@ public class ServerSocketHandler implements Runnable{
         try {
             ObjectOutputStream outFromServer = new ObjectOutputStream(socket.getOutputStream());
             ObjectInputStream inFromClient =new ObjectInputStream(socket.getInputStream());
-            Request login=(Request)inFromClient.readObject();
-            server.getUserList().addUsername(login.getId());
             while(true)
             {
-
+                Request login=(Request)inFromClient.readObject();
+                if(login.getAction().name().equals("log in"))
+                {
+                    server.getUserList().addUser(new User(login.getId()));
+                }
 
             }
+
+
+
         }
         catch (IOException e) {
             e.printStackTrace();
